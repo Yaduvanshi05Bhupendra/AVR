@@ -1,10 +1,20 @@
-/*
- * ADC_Potentiometer.c
- *
- * Created: 10-04-2018 02:11:10 PM
- *  Author: FLY-HIGH
- */ 
-
+/////////////////////////////////////////////////////
+// Copyright (c) Bhupendra                         //
+// ------------------------------------------------//
+// FILE NAME: ADC Potentiometer 10 bit.c           //
+// TYPE: Hardware                                  //
+// DEPARTMENT: Verilog Design with FPGA            //
+// AUTHOR: Bhupendra Kumar Yadav                   //
+// AUTHOR'S EMAIL: Yaduvanshi05bhupendra@gmail.com //
+//-------------------------------------------------//
+// Release history                                 //
+// VERSION DATE AUTHOR DESCRIPTION                 //
+// 1.0 25/01/2029 Bhupendra Kumar Yadav            //
+//-------------------------------------------------//
+// KEYWORDS: Interrupt, LCD, Function              //
+//-------------------------------------------------//
+// PURPOSE: Measure resistance of Potentiometer    //
+/////////////////////////////////////////////////////
 
 #include <avr/io.h>
 #include <stdlib.h>
@@ -32,12 +42,7 @@ int main(void)
 	sei();
 	
 	ADCSRA |= 1<<ADSC;
-		
-    while(1)
-    {
-        //TODO:: Please write your application code 
-    }
-}
+
 
 ISR(ADC_vect)
 {
